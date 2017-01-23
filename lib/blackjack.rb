@@ -1,3 +1,8 @@
+### Previous commits pass all learn.co tests
+### This commit does not
+### It has been modified to output different strings after
+### hitting, staying before 21, winning by hitting 21, and losing by exceeding 21.
+
 def welcome
   puts "Welcome to the Blackjack Table"
 end
