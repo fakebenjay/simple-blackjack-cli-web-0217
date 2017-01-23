@@ -19,7 +19,13 @@ def get_user_input
 end
 
 def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  if card_total == 21
+    puts "Siman tov! Mazel tov!"
+  elsif card_total < 21
+    puts "Phew"
+  elsif card_total > 21
+    puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  end
 end
 
 def initial_round
@@ -38,6 +44,9 @@ def hit?(card_total)
   if input == 'h'
     card_total += deal_card
   elsif input == 's'
+    display_card_total(card_total)
+    end_game(card_total)
+    abort
   else
     invalid_command
   end
